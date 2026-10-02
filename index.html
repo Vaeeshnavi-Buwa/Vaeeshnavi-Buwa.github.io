@@ -1,174 +1,911 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Vaeeshnavi Buwa</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vaeeshnavi Buwa | Senior Data Analyst</title>
+<meta name="description" content="Vaeeshnavi Buwa, Senior Data Analyst. Six years of fixing the data behind business decisions. Open to roles in Mumbai, Pune or remote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0E1E1A; --bg2:#122822; --card:#13261F; --line:#24433A;
+  --ink:#F1EADB; --beige:#E6DCC5; --muted:#A9B8AE;
+  --emerald:#0F4D3F; --gold:#D4A017; --gold-soft:#E2BE5A; --burgundy:#8B1E3F; --sage:#6A8F7B; --rose:#B35C6B;
+  --serif:"Playfair Display", Georgia, "Times New Roman", serif;
+  --sans:Montserrat, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#0E1E1A; --bg2:#122822; --card:#13261F; --line:#24433A; --ink:#F1EADB; --muted:#A9B8AE; }
+}
+:root[data-theme="dark"]{ --bg:#0E1E1A; --bg2:#122822; --card:#13261F; --line:#24433A; --ink:#F1EADB; --muted:#A9B8AE; }
+:root[data-theme="light"]{ --bg:#F3EDE0; --bg2:#E6DCC5; --card:#FBF7EE; --line:#D6C9AC; --ink:#14251F; --muted:#4E5F57; --gold:#A87A06; --gold-soft:#8C6505; --beige:#3A4A43; }
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;overflow-x:hidden}
+a{color:var(--gold-soft);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:6px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0}
+p{margin:0 0 1em}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+/* ===== nav ===== */
+.bar{position:fixed;left:0;right:0;top:0;z-index:30;padding-top:env(safe-area-inset-top,0px);transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.bar.solid{background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-color:var(--line)}
+.bar .wrap{display:flex;align-items:center;height:68px;gap:26px}
+.brand{font-family:var(--serif);font-size:20px;color:var(--ink);text-decoration:none;margin-right:auto;opacity:0;transition:opacity .3s}
+.bar.solid .brand{opacity:1}
+.brand span{color:var(--gold)}
+.bar nav{display:flex;gap:24px;font-size:15px}
+.bar nav a{color:var(--muted);text-decoration:none}
+.bar nav a:hover{color:var(--ink)}
+.iconbtn{display:inline-flex;align-items:center;gap:8px;font:600 14px var(--sans);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:20px;padding:7px 14px;cursor:pointer;text-decoration:none;transition:border-color .2s,background .2s}
+.iconbtn:hover{border-color:var(--gold);background:color-mix(in srgb,var(--gold) 12%,transparent)}
+.iconbtn svg{width:16px;height:16px;color:var(--gold)}
+#replay{font-size:12px;padding:4px 10px;gap:5px;border-radius:14px;color:var(--muted)}
+#replay svg{width:12px;height:12px}
+@media (max-width:860px){.bar nav{display:none}}
+@media (max-width:520px){.iconbtn .lbl{display:none}.iconbtn{padding:8px 10px}}
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Vaeeshnavi Buwa Portfolio<br />
-						</h1>
-						<p>A Data Analyst skilled in SQL, Tableau, Python, Excel and Power Bi. <a href="https://twitter.com/ajlkn">@ajlkn</a> 
-						 <a href="https://html5up.net/license"></a>.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px var(--sans);padding:14px 26px;border-radius:8px;text-decoration:none;border:1px solid var(--gold);transition:transform .2s,background .2s}
+.btn.primary{background:var(--gold);color:#1A1405}
+.btn.primary:hover{background:var(--gold-soft);transform:translateY(-2px)}
+.btn.ghost{color:var(--ink)}
+.btn.ghost:hover{background:color-mix(in srgb,var(--gold) 14%,transparent);transform:translateY(-2px)}
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Vaeeshnavi Buwa</a>
-					</header>
+/* ===== hero ===== */
+.hero{position:relative;min-height:94svh;overflow:hidden;
+  background:radial-gradient(1000px 650px at 92% 5%, color-mix(in srgb,var(--burgundy) 50%,transparent), transparent 62%),
+             radial-gradient(900px 700px at 0% 100%, color-mix(in srgb,var(--emerald) 80%,transparent), transparent 62%), var(--bg)}
+.hero .wrap{position:relative;z-index:1;padding-top:clamp(108px,15vh,150px);padding-bottom:110px}
+.who{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+.name{font-family:var(--serif);font-weight:700;font-size:clamp(34px,4.6vw,56px);line-height:1.05;margin:0}
+.name .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em}
+.name .w > span{display:inline-block;transform:translateY(110%);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+.name .w:nth-child(2) > span{animation-delay:.12s;color:var(--gold)}
+.role{font:600 clamp(14px,1.4vw,16px) var(--sans);letter-spacing:.14em;color:var(--gold-soft);padding:5px 12px;border:1px solid color-mix(in srgb,var(--gold) 55%,transparent);border-radius:4px;animation-delay:.3s}
+@keyframes rise{to{transform:none}}
+.fadein{opacity:0;transform:translateY(14px);animation:fade .8s ease forwards}
+@keyframes fade{to{opacity:1;transform:none}}
+.sass{font-family:var(--serif);font-weight:600;font-size:clamp(36px,5.6vw,72px);line-height:1.08;margin:34px 0 0;max-width:15ch;animation-delay:.45s}
+.sass em{font-style:italic;color:var(--gold);background:linear-gradient(100deg,var(--gold) 0%,#F3D77A 45%,var(--gold) 70%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear 2s infinite}
+@keyframes shine{to{background-position:-220% 0}}
+.lede{font-size:clamp(17px,1.7vw,19px);color:var(--beige);max-width:52ch;margin:26px 0 0;animation-delay:.6s}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;animation-delay:.7s}
+.badges span{font-size:14px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid color-mix(in srgb,var(--gold) 45%,var(--line));background:color-mix(in srgb,var(--bg) 70%,transparent);color:var(--beige)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;animation-delay:.8s}
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							
-						</ul>
-						<ul class="icons">
-							
-							<li><a href= "https://www.linkedin.com/in/vaeeshnavibuwa/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-					        <li><a href="https://github.com/Vaeeshnavi-Buwa" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+/* diagonal clue field */
+.clues{position:absolute;inset:0;pointer-events:none;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent 0%,transparent 34%,#000 62%);mask:linear-gradient(90deg,transparent 0%,transparent 34%,#000 62%)}
+.tilt{position:absolute;left:-30%;top:-30%;width:160%;height:160%;transform:rotate(-14deg)}
+.tilt .grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(auto-fill,160px);grid-auto-rows:70px;font:500 13px var(--sans)}
+.tilt .grid div{display:flex;align-items:center;justify-content:center}
+.tilt .messy{color:var(--muted);opacity:.1;-webkit-mask:radial-gradient(circle at var(--cx,-9999px) var(--cy,-9999px),transparent 82px,#000 84px);mask:radial-gradient(circle at var(--cx,-9999px) var(--cy,-9999px),transparent 82px,#000 84px)}
+.tilt .clean{color:var(--gold);opacity:1;font-weight:600;clip-path:circle(80px at var(--cx,-999px) var(--cy,-999px))}
+.lens{position:absolute;z-index:0;pointer-events:none;background:radial-gradient(circle,rgba(212,160,23,.07),transparent 70%);width:160px;height:160px;margin:-80px 0 0 -80px;left:var(--mx,-999px);top:var(--my,-999px);border:3px solid var(--gold);border-radius:50%;box-shadow:0 0 0 6px rgba(212,160,23,.12),0 0 40px rgba(212,160,23,.25),inset 0 0 30px rgba(212,160,23,.12)}
+.lens::after{content:"";position:absolute;width:56px;height:12px;background:var(--gold);border-radius:6px;left:-40px;bottom:-6px;transform:rotate(-45deg)}
+@media (max-width:760px){.clues{-webkit-mask:linear-gradient(180deg,transparent 0%,#000 70%);mask:linear-gradient(180deg,transparent 0%,#000 70%)}.lens{width:120px;height:120px;margin:-60px 0 0 -60px}.tilt .clean{clip-path:circle(60px at var(--cx,-999px) var(--cy,-999px))}}
 
-				<!-- Main -->
-					<div id="main">
+/* ===== numbers ===== */
+.proof{position:relative;margin-top:-70px;z-index:2}
+.proof .grid{display:grid;grid-template-columns:repeat(4,1fr);background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.proof .grid > div{padding:28px 22px 26px;border-left:1px solid var(--line);text-align:center}
+.proof .grid > div:first-child{border-left:0}
+.proof b{display:block;font-family:var(--serif);font-weight:700;font-size:clamp(64px,8vw,108px);color:var(--gold);line-height:.95;letter-spacing:-0.02em}
+.proof b small{font-size:.42em;font-weight:600;margin-left:2px;vertical-align:.9em;color:var(--gold-soft)}
+.proof .grid > div > span{font-size:15px;color:var(--muted);display:block;margin-top:12px}
+.proof b .count{display:inline;font-size:inherit;color:inherit;margin:0}
+@media (max-width:820px){.proof .grid{grid-template-columns:1fr 1fr}.proof .grid > div:nth-child(3){border-left:0}.proof .grid > div:nth-child(n+3){border-top:1px solid var(--line)}}
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									
-									<h2><a href="https://github.com/Vaeeshnavi-Buwa/SQL-Nashville-Housing/blob/main/Nashville%20Housing.sql">Data Cleaning in SQL<br />
-									</a></h2>
-									<p>In this we clean housing data using SQL server.</p>
-								</header>
-								<a href="https://github.com/Vaeeshnavi-Buwa/SQL-Nashville-Housing/blob/main/Nashville%20Housing.sql" class="image main"><img src="images/housing.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/Vaeeshnavi-Buwa/SQL-Nashville-Housing/blob/main/Nashville%20Housing.sql" class="button large">View Project</a></li>
-								</ul>
-							</article>
+/* ===== sections ===== */
+section{padding:110px 0 30px}
+.head{max-width:740px;margin-bottom:46px}
+.head h2{font-size:clamp(34px,4.6vw,52px)}
+.head p{color:var(--muted);font-size:18px;margin-top:14px}
+.rule{display:block;width:56px;height:2px;background:var(--gold);margin-bottom:22px;transform-origin:left}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal .rule{transform:scaleX(0);transition:transform .9s .2s cubic-bezier(.2,.7,.2,1)}
+.reveal.in .rule{transform:scaleX(1)}
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/Vaeeshnavi-Buwa/PortfolioProjects/blob/main/Covid%20sql%201.sql">Data Exploration in SQL<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Vaeeshnavi-Buwa/PortfolioProjects/blob/main/Covid%20sql%201.sql" class="image fit"><img src="images/covid.png" alt="" /></a>
-									<p>Data Exploration of Covid 19 Dataset in SQL Server.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Vaeeshnavi-Buwa/PortfolioProjects/blob/main/Covid%20sql%201.sql" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="https://public.tableau.com/app/profile/vaeeshnavi.buwa">Tableau Projects<br />
-										</a></h2>
-									</header>
-									<a href="https://public.tableau.com/app/profile/vaeeshnavi.buwa" class="image fit"><img src="images/tableau.webp" alt="" /></a>
-									<p>This includes all of my Tableau Dashboards.</p>
-									<ul class="actions special">
-										<li><a href="https://public.tableau.com/app/profile/vaeeshnavi.buwa" class="button">View Projects</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date"></span>
-										<h2><a href="https://github.com/Vaeeshnavi-Buwa/Power-Bi">Power Bi<br />
-										Projects</a></h2>
-									</header>
-									<a href="https://github.com/Vaeeshnavi-Buwa/Power-Bi" class="image fit"><img src="images/powerbi.png" alt="" /></a>
-									<p>This includes all my Power Bi dashboards</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Vaeeshnavi-Buwa/Power-Bi" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date"></span>
-										<h2><a href="https://github.com/Vaeeshnavi-Buwa/Excel-Projects/blob/main/Bike%20sales.xlsx">Excel <br />
-										Project</a></h2>
-									</header>
-									<a href="https://github.com/Vaeeshnavi-Buwa/Excel-Projects/blob/main/Bike%20sales.xlsx" class="image fit"><img src="images/excel.png" alt="" /></a>
-									<p>This contains my Basic Excel project on Bike Sales.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Vaeeshnavi-Buwa/Excel-Projects/blob/main/Bike%20sales.xlsx" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date"></span>
-										<h2><a href="#">Web Scraping<br />
-										using Python</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/webscraping.png" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									
+/* ===== projects ===== */
+.project{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:34px;transition:border-color .3s}
+.project:hover{border-color:color-mix(in srgb,var(--gold) 55%,var(--line))}
+.project.flip{grid-template-columns:minmax(0,6fr) minmax(0,5fr)}
+.project.flip .visual{order:2}
+.visual{position:relative;min-height:360px;display:flex;align-items:center;justify-content:center;padding:44px 28px 34px;
+  background:radial-gradient(500px 340px at 30% 20%, rgba(15,77,63,.9), transparent 70%), linear-gradient(160deg,#0B1A16,#160F14)}
+.visual.wine{background:radial-gradient(500px 340px at 70% 30%, rgba(139,30,63,.85), transparent 70%), linear-gradient(160deg,#160F14,#0B1A16)}
+.visual > svg{width:100%;max-width:430px;height:auto;overflow:visible}
+.status{position:absolute;left:18px;top:16px;font-size:13px;font-weight:500;color:#E6DCC5;background:rgba(14,30,26,.65);border:1px solid rgba(212,160,23,.45);padding:4px 12px;border-radius:20px;z-index:2}
+.status.wip{border-color:rgba(179,92,107,.75)}
+.inspect{position:absolute;right:16px;bottom:12px;font-size:13px;color:#E6DCC5;opacity:.7}
+@media (hover:none){.inspect{display:none}}
+.zoom{position:absolute;width:190px;height:190px;margin:-95px 0 0 -95px;pointer-events:none;opacity:0;transform:scale(.5);transition:opacity .2s,transform .25s cubic-bezier(.2,.9,.3,1.3);z-index:3}
+.zooming .zoom{opacity:1;transform:none}
+.zoom .zin{position:absolute;inset:0;border-radius:50%;overflow:hidden;border:4px solid #D4A017;background:#0B1A16;box-shadow:0 0 0 7px rgba(212,160,23,.15),0 20px 40px rgba(0,0,0,.5)}
+.zoom .zin svg{position:absolute;max-width:none!important}
+.body{padding:38px 40px}
+.body h3{font-size:clamp(27px,2.8vw,33px);margin-bottom:12px}
+.body .hook{font-size:18.5px;color:var(--beige);margin-bottom:20px}
+.body h4{font:600 14px var(--sans);color:var(--sage);margin:20px 0 6px}
+.body ul{margin:0;padding-left:20px}
+.body li{margin-bottom:7px}
+.body li::marker{color:var(--gold)}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0 8px}
+.nums div{border-top:2px solid var(--gold);padding-top:12px}
+.nums b{display:block;font-family:var(--serif);font-weight:700;font-size:clamp(36px,3.6vw,46px);color:var(--gold-soft);line-height:1}
+.nums b small{font-size:.5em;font-weight:600;margin-left:1px}
+.nums span{font-size:14px;color:var(--muted);display:block;margin-top:6px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tools span{font-size:13px;padding:5px 12px;border-radius:20px;border:1px solid var(--line);color:var(--muted);background:var(--bg2)}
+.honest{font-size:14px;color:var(--muted);margin:18px 0 0;padding-left:12px;border-left:2px solid var(--rose)}
+.more{display:inline-block;margin-top:20px;font-weight:600;font-size:15px;text-decoration:none}
+.more:hover{text-decoration:underline}
+.links{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:22px}
+.links .more{margin-top:0}
+.btn.sm{padding:10px 18px;font-size:15px}
+@media (max-width:900px){.project,.project.flip{grid-template-columns:1fr}.project.flip .visual{order:0}.visual{min-height:270px}.body{padding:28px 24px}}
+@media (max-width:480px){.nums{grid-template-columns:1fr 1fr}}
 
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p>Thane, Mumbai</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">8928073870</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">vaeeshnavibuwa9@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									
-									<li><a href= "https://www.linkedin.com/in/vaeeshnavibuwa/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-									
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+/* looping project animations (always on) */
+.v-merge .dot{animation:merge 6s cubic-bezier(.5,.1,.2,1) infinite}
+@keyframes merge{0%,12%{transform:none;opacity:1}42%,82%{transform:translate(var(--dx),var(--dy));opacity:0}96%,100%{transform:none;opacity:1}}
+.v-merge .golden{transform-box:fill-box;transform-origin:center;animation:goldin 6s cubic-bezier(.2,.9,.3,1.3) infinite}
+@keyframes goldin{0%,38%{transform:scale(.3);opacity:0}48%,82%{transform:none;opacity:1}92%,100%{transform:scale(.3);opacity:0}}
+.v-merge .orbit{transform-origin:210px 125px;animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.v-merge .count1{animation:swap1 6s steps(1) infinite}.v-merge .count2{animation:swap2 6s steps(1) infinite}
+@keyframes swap1{0%{opacity:1}45%{opacity:0}96%{opacity:1}}
+@keyframes swap2{0%{opacity:0}45%{opacity:1}96%{opacity:0}}
+.v-bridge .bar-a{transform-box:fill-box;transform-origin:bottom;animation:grow 7s cubic-bezier(.2,.7,.2,1) infinite}
+.v-bridge .bar-a.fall{transform-origin:top}
+@keyframes grow{0%{transform:scaleY(0)}9%,84%{transform:scaleY(1)}96%,100%{transform:scaleY(0)}}
+.v-bridge .tot{animation:totin 7s ease infinite}
+@keyframes totin{0%,26%{opacity:0}32%,84%{opacity:1}94%,100%{opacity:0}}
+.v-bridge .flag{transform-box:fill-box;transform-origin:center bottom;animation:flag 7s ease infinite}
+@keyframes flag{0%,14%{opacity:0;transform:translateY(8px)}20%,84%{opacity:1;transform:none}94%,100%{opacity:0}}
+.v-gauge .arc{stroke-dasharray:315;animation:arc 6s cubic-bezier(.2,.7,.2,1) infinite}
+@keyframes arc{0%{stroke-dashoffset:315}30%,80%{stroke-dashoffset:110}95%,100%{stroke-dashoffset:315}}
+.v-gauge .needle{transform-origin:210px 190px;animation:needle 6s cubic-bezier(.2,.7,.2,1) infinite}
+@keyframes needle{0%{transform:rotate(-90deg)}30%{transform:rotate(28deg)}34%{transform:rotate(22deg)}38%,80%{transform:rotate(25deg)}95%,100%{transform:rotate(-90deg)}}
+.v-gauge .why{animation:why 6s ease infinite}
+.v-gauge .why2{animation-delay:.35s}
+@keyframes why{0%,32%{opacity:0;transform:translateY(8px)}40%,80%{opacity:1;transform:none}92%,100%{opacity:0}}
+.v-gauge .verdict{animation:totin 6s ease infinite}
+.v-map .sweep{animation:sweep 4.5s linear infinite}
+@keyframes sweep{from{transform:translateX(-40px)}to{transform:translateX(460px)}}
+.v-map .risk{transform-box:fill-box;transform-origin:center;animation:flare 4.5s ease-out infinite}
+@keyframes flare{0%,100%{transform:scale(1)}6%{transform:scale(1.9)}14%{transform:scale(1)}}
+.v-map .pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(3.4);opacity:0}}
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+/* ===== what you get ===== */
+.gets{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.get{grid-column:span 2;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 26px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.get:nth-child(4),.get:nth-child(5){grid-column:span 3}
+.get:hover{transform:translateY(-5px);border-color:var(--gold)}
+.get::before{content:"";position:absolute;right:-40px;top:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(212,160,23,.18),transparent 70%);transition:transform .5s}
+.get:hover::before{transform:scale(1.8)}
+.get svg{width:34px;height:34px;color:var(--gold);margin-bottom:14px}
+.get h3{font-size:23px;margin-bottom:8px}
+.get p{color:var(--muted);margin:0;font-size:16px}
+@media (max-width:900px){.gets{grid-template-columns:1fr 1fr}.get,.get:nth-child(4),.get:nth-child(5){grid-column:span 1}.get:nth-child(5){grid-column:span 2}}
+@media (max-width:560px){.gets{grid-template-columns:1fr}.get:nth-child(5){grid-column:span 1}}
 
-			</div>
+/* ===== experience ===== */
+.timeline{position:relative;padding-left:34px}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--burgundy),var(--emerald))}
+.job{position:relative;padding-bottom:44px}
+.job::before{content:"";position:absolute;left:-32px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--gold)}
+.job .when{font-size:14px;color:var(--gold-soft);font-weight:600}
+.job h3{font-size:26px;margin:4px 0 2px}
+.job .org{color:var(--muted);margin-bottom:12px}
+.job ul{margin:0;padding-left:20px;max-width:780px}
+.job li{margin-bottom:7px}
+.job li::marker{color:var(--gold)}
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+/* ===== skills ===== */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px}
+.panel h3{font-size:25px;margin-bottom:16px}
+.skillrow{margin-bottom:16px}
+.skillrow b{display:block;font-size:15px;margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-size:14px;padding:5px 12px;border-radius:20px;background:var(--bg2);border:1px solid var(--line);color:var(--beige)}
+.panel.wine{background:linear-gradient(150deg,color-mix(in srgb,var(--burgundy) 35%,var(--card)),var(--card))}
+.panel.wine em{color:var(--gold-soft)}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
 
-	</body>
+/* ===== contact ===== */
+.contact{margin-top:100px;padding:90px 0 110px;text-align:center;background:radial-gradient(700px 400px at 50% 0%, rgba(15,77,63,.8), transparent 70%)}
+.contact .waver{width:96px;margin:0 auto 18px}
+.contact h2{font-size:clamp(36px,5vw,58px);max-width:18ch;margin:0 auto}
+.contact p{color:var(--muted);font-size:18px;max-width:54ch;margin:18px auto 34px}
+.contact .cta{justify-content:center;margin-top:0}
+.contact .small{margin-top:38px;font-size:15px}
+.contact .small a{color:var(--muted);margin:0 12px}
+
+/* ===== the detective ===== */
+.det{display:block;width:100%;height:auto;overflow:visible}
+.waver .arm{transform-origin:50px 46px;animation:wave 1.6s ease-in-out infinite}
+@keyframes wave{0%,100%{transform:rotate(0)}20%{transform:rotate(-40deg)}40%{transform:rotate(-20deg)}60%{transform:rotate(-40deg)}}
+
+/* detective companion */
+.buddy{position:fixed;left:0;top:0;width:64px;z-index:200;pointer-events:none;opacity:0;transition:opacity .3s;will-change:transform}
+.buddy.on{opacity:1}
+.buddy .face{transition:transform .2s}
+.buddy.flip .face{transform:scaleX(-1)}
+.buddy .l1{transform-origin:30px 72px;animation:leg .26s ease-in-out infinite alternate;animation-play-state:paused}
+.buddy .l2{transform-origin:43px 72px;animation:leg .26s ease-in-out infinite alternate-reverse;animation-play-state:paused}
+.buddy.moving .l1,.buddy.moving .l2{animation-play-state:running}
+.buddy .arm{transform-origin:50px 46px;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.buddy .glass{transition:fill .2s}
+.buddy.hot .glass{fill:rgba(212,160,23,.8)}
+.buddy.hot .arm{transform:rotate(-22deg)}
+.buddy.tap .det{animation:tap .3s ease}
+@keyframes tap{50%{transform:scale(.86)}}
+.buddy.touchmode{left:auto;top:auto;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));width:60px;transform:none!important;pointer-events:auto;cursor:pointer}
+.bubble{position:fixed;left:0;top:0;z-index:210;max-width:260px;background:#F1EADB;color:#14251F;font:600 14.5px/1.4 var(--sans);padding:10px 14px;border:2px solid #D4A017;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.45);pointer-events:none;opacity:0;transform:translateY(6px) scale(.92);transition:opacity .2s,transform .25s cubic-bezier(.2,.9,.3,1.3)}
+.bubble.show{opacity:1;transform:none}
+html.intro-on .buddy, html.intro-on .bubble{opacity:0!important}
+@keyframes leg{from{transform:rotate(-18deg)}to{transform:rotate(18deg)}}
+
+/* ===== intro ===== */
+@property --r{syntax:'<length>';inherits:false;initial-value:0px}
+@property --sx{syntax:'<percentage>';inherits:false;initial-value:18%}
+@property --sy{syntax:'<percentage>';inherits:false;initial-value:30%}
+@property --sr{syntax:'<length>';inherits:false;initial-value:90px}
+html.intro-on, html.intro-on body{overflow:hidden}
+html.intro-on .hero, html.intro-on .hero *{animation-play-state:paused!important}
+.intro{position:fixed;inset:0;z-index:100;overflow:hidden;background:#0A1713;
+  --rs:clamp(200px,24vw,280px); --hl:60px; --hx:68px; --hy:39px; --rw:96px;
+  --x:50%;--y:40%;
+  -webkit-mask:radial-gradient(circle at var(--x) var(--y), transparent var(--r), #000 calc(var(--r) + 2px));
+          mask:radial-gradient(circle at var(--x) var(--y), transparent var(--r), #000 calc(var(--r) + 2px))}
+@media (max-width:600px){.intro{--rs:190px;--hl:28px;--hx:51px;--hy:29px;--rw:72px}}
+.intro.open{animation:hole 1.05s cubic-bezier(.7,0,.3,1) forwards}
+@keyframes hole{to{--r:160vmax}}
+.intro .wall{position:absolute;inset:-20px;display:grid;grid-template-columns:repeat(auto-fill,118px);grid-auto-rows:46px;gap:8px;padding:10px;transform:rotate(-8deg) scale(1.15)}
+.intro .wall div{border:1px solid #1E3A31;border-radius:6px;display:flex;align-items:center;justify-content:center;font:600 12px var(--sans);color:#6A8F7B;background:rgba(19,38,31,.85)}
+.intro .wall div.bad{color:#F1EADB;border-color:#B35C6B;background:rgba(139,30,63,.7);animation:badflash 1.6s ease-in-out infinite alternate}
+@keyframes badflash{to{box-shadow:0 0 16px rgba(179,92,107,.7)}}
+.intro .dark{position:absolute;inset:0;background:radial-gradient(1200px 800px at 80% 0%, rgba(139,30,63,.35), transparent 60%),#06110E;
+  -webkit-mask:radial-gradient(circle at var(--sx) var(--sy), transparent var(--sr), #000 calc(var(--sr) + 140px));
+          mask:radial-gradient(circle at var(--sx) var(--sy), transparent var(--sr), #000 calc(var(--sr) + 140px));
+  animation:search 2.7s ease-in-out .15s forwards, focus .9s 2.8s ease forwards}
+@keyframes search{0%{--sx:18%;--sy:30%}30%{--sx:72%;--sy:24%}62%{--sx:28%;--sy:66%}100%{--sx:50%;--sy:40%}}
+@keyframes focus{to{--sr:340px}}
+.intro .say{position:absolute;left:0;right:0;top:0;padding-top:max(8vh,48px)!important;padding-bottom:44px!important;background:linear-gradient(#06110E 55%,transparent);z-index:1;margin:0;text-align:center;padding:0 24px;font-family:var(--serif);color:#F1EADB;font-size:clamp(22px,3.2vw,36px);line-height:1.25;text-shadow:0 2px 20px rgba(0,0,0,.8)}
+.intro .say span{display:block;opacity:0;transform:translateY(12px)}
+.intro .say .s1{animation:sayin .6s .3s forwards, sayout .4s 2.5s forwards}
+.intro .say .s2{color:#D4A017;position:absolute;left:0;right:0;top:0;padding:0 24px;animation:sayin .6s 2.8s forwards}
+@keyframes sayin{to{opacity:1;transform:none}}
+@keyframes sayout{to{opacity:0;transform:translateY(-12px)}}
+.runner{position:absolute;width:var(--rw);left:-130px;
+  --fx:calc(50% - var(--rs) * .3535 - var(--hl) * .707 - var(--hx));
+  top:calc(40% + var(--rs) * .3535 + var(--hl) * .707 - var(--hy));
+  animation:walk 2.4s .4s cubic-bezier(.45,.05,.4,1) forwards}
+@keyframes walk{from{left:-130px}to{left:var(--fx)}}
+.runner::after{content:"";position:absolute;left:-30%;right:-30%;bottom:-2px;height:2px;background:linear-gradient(90deg,transparent,#D4A017,transparent);opacity:.5}
+.hop{animation:land .35s 2.8s ease}
+@keyframes land{50%{transform:translateY(-10px)}}
+.runner .bob{animation:bob .3s ease-in-out 8 alternate}
+@keyframes bob{to{transform:translateY(-2px)}}
+.runner .l1{transform-origin:30px 72px;animation:leg .3s ease-in-out 8 alternate}
+.runner .l2{transform-origin:43px 72px;animation:leg .3s ease-in-out 8 alternate-reverse}
+.runner .arm{transform-origin:50px 46px;animation:raise .5s 2.85s cubic-bezier(.3,1.6,.5,1) forwards}
+@keyframes raise{to{transform:rotate(-40deg)}}
+.runner .glass,.runner .handle,.runner .glint{animation:hideg .15s 3.05s forwards}
+@keyframes hideg{to{opacity:0}}
+.ring{position:absolute;left:50%;top:40%;width:var(--rs);height:var(--rs);margin:calc(var(--rs) / -2) 0 0 calc(var(--rs) / -2);border:6px solid #D4A017;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #1F3A31, #0C1A16 60%);box-shadow:0 0 0 12px rgba(212,160,23,.14),0 0 90px rgba(212,160,23,.35);
+  display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;transform:scale(.08);transform-origin:12% 92%;animation:ringin .7s 3.0s cubic-bezier(.2,.9,.3,1.25) forwards}
+.ring::after{content:"";position:absolute;width:var(--hl);height:14px;border-radius:7px;background:#D4A017;
+  left:calc(var(--rs) * .146 - var(--hl) - 6px);top:calc(var(--rs) * .854 - 13px);transform-origin:right center;transform:rotate(-45deg)}
+@keyframes ringin{to{opacity:1;transform:none}}
+.ring .rn{display:block;font-family:var(--serif);font-weight:700;color:#D4A017;font-size:clamp(24px,2.7vw,34px);line-height:1.1;opacity:0;animation:sayin .5s 3.5s forwards}
+.ring .rr{display:block;margin-top:10px;font:600 11.5px var(--sans);letter-spacing:.16em;color:#E6DCC5;opacity:0;animation:sayin .5s 3.75s forwards}
+.skip{position:absolute;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));font:600 13px var(--sans);color:#E6DCC5;background:rgba(14,30,26,.7);border:1px solid rgba(212,160,23,.5);border-radius:20px;padding:7px 14px;cursor:pointer;z-index:2}
+.skip:hover{background:rgba(212,160,23,.15)}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .name .w > span,.fadein,.reveal{transform:none!important;opacity:1!important}
+  .v-merge .dot{opacity:.9}.v-gauge .arc{stroke-dashoffset:110}.v-gauge .needle{transform:rotate(25deg)}
+  .intro,.lens,.tilt .clean{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="intro" id="intro" role="dialog" aria-label="Intro animation">
+  <div class="wall" id="wall" aria-hidden="true"></div>
+  <div class="dark"></div>
+  <p class="say"><span class="s1">Somewhere in your data, something doesn't add up.</span><span class="s2">Lucky for you, I know who finds it.</span></p>
+  <div class="runner"><div class="hop" data-det></div></div>
+  <div class="ring"><div><span class="rn">Vaeeshnavi<br>Buwa</span><span class="rr">SENIOR DATA ANALYST</span></div></div>
+  <button class="skip" type="button">Skip intro</button>
+</div>
+
+<header class="bar" id="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">Vaeeshnavi <span>Buwa</span></a>
+    <nav aria-label="Sections">
+      <a href="#work" data-say="Straight to the good stuff. I like you.">Projects</a>
+      <a href="#value" data-say="Spoiler: it's a lot.">What you get</a>
+      <a href="#experience" data-say="Six years. Every one of them counted.">Experience</a>
+    </nav>
+    <button class="iconbtn" id="replay" type="button" aria-label="Replay intro" data-say="Again? I'm flattered.">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="M15 15l6 6"/></svg><span class="lbl">Replay intro</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" id="start" style="padding:0">
+    <div class="clues" id="clues" aria-hidden="true">
+      <div class="tilt" id="tilt"><div class="grid messy"></div><div class="grid clean"></div></div>
+    </div>
+    <div class="lens" id="lens" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="who">
+        <h1 class="name"><span class="w"><span>Vaeeshnavi</span></span> <span class="w"><span>Buwa</span></span></h1>
+        <span class="role fadein">SENIOR DATA ANALYST</span>
+      </div>
+      <p class="sass fadein">Your data is lying to you. <em>I find out where.</em></p>
+      <p class="lede fadein">For six years I've been fixing the data behind business decisions: catching what's wrong, explaining why a number moved, and putting a value on what it's costing.</p>
+      <div class="badges fadein">
+        <span>6 years of experience</span>
+        <span>Published with Elsevier</span>
+        <span>Open to Mumbai, Pune or remote</span>
+      </div>
+      <div class="cta fadein">
+        <a class="btn primary" href="#work" data-say="Good choice. The projects are my favourite part.">See my projects</a>
+        <a class="btn ghost" href="mailto:buwavaeeshnavi@gmail.com" data-say="Go on, say hi. She doesn't bite.">Email me</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="proof wrap">
+    <div class="grid" data-say="Real numbers, from real work.">
+      <div><b><span class="count" data-to="6">0</span><small>+</small></b><span>years of experience</span></div>
+      <div><b><span class="count" data-to="2500" data-sep="1">0</span><small>+</small></b><span>products' data kept accurate</span></div>
+      <div><b><span class="count" data-to="30">0</span><small>%</small></b><span>faster product approvals</span></div>
+      <div><b><span class="count" data-to="300">0</span><small>+</small></b><span>learners taught worldwide</span></div>
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="rule"></span>
+        <h2>Selected projects</h2>
+        <p>Each one starts with a question a business leader actually asks, and ends with a clear answer, a number and a next step.</p>
+      </div>
+
+      <article class="project reveal">
+        <div class="visual" data-say="Watch 8 messy copies become 1 clean record.">
+          <span class="status">Built</span>
+          <svg viewBox="0 0 420 260" class="v-merge" role="img" aria-label="Eight duplicate records merging into one trusted record">
+            <g fill="none" stroke="#24433A"><circle cx="210" cy="125" r="95"/><circle cx="210" cy="125" r="62"/></g>
+            <g class="orbit"><circle cx="210" cy="30" r="3" fill="#D4A017"/><circle cx="305" cy="125" r="2" fill="#6A8F7B"/></g>
+            <g>
+              <circle class="dot" cx="80"  cy="55"  r="9" fill="#6A8F7B" style="--dx:130px;--dy:70px"/>
+              <circle class="dot" cx="340" cy="47"  r="9" fill="#B35C6B" style="--dx:-130px;--dy:78px"/>
+              <circle class="dot" cx="60"  cy="185" r="9" fill="#6A8F7B" style="--dx:150px;--dy:-60px"/>
+              <circle class="dot" cx="360" cy="195" r="9" fill="#B35C6B" style="--dx:-150px;--dy:-70px"/>
+              <circle class="dot" cx="140" cy="222" r="9" fill="#6A8F7B" style="--dx:70px;--dy:-97px"/>
+              <circle class="dot" cx="290" cy="23"  r="9" fill="#6A8F7B" style="--dx:-80px;--dy:102px"/>
+              <circle class="dot" cx="120" cy="25"  r="9" fill="#B35C6B" style="--dx:90px;--dy:100px"/>
+              <circle class="dot" cx="300" cy="226" r="9" fill="#6A8F7B" style="--dx:-90px;--dy:-101px"/>
+            </g>
+            <g class="golden">
+              <circle cx="210" cy="125" r="30" fill="#D4A017"/>
+              <path d="M197 126 l9 9 l18 -20" fill="none" stroke="#0E1E1A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <g font-family="Montserrat,sans-serif" font-size="13" text-anchor="middle">
+              <text class="count1" x="210" y="252" fill="#E6DCC5">8 records for the same item</text>
+              <text class="count2" x="210" y="252" fill="#D4A017">1 trusted record</text>
+            </g>
+          </svg>
+          <span class="inspect">Hover to zoom</span>
+        </div>
+        <div class="body">
+          <h3>Master data governance platform</h3>
+          <p class="hook">The same raw material saved under five different codes. A supplier's details two years out of date. Small errors like these quietly cost manufacturers crores. I built a system that finds them, fixes them and puts a rupee value on each one.</p>
+          <h4>What I built</h4>
+          <ul>
+            <li>A realistic copy of a manufacturer's product and supplier records: 500,000 records across 8 factories, modelled on real SAP tables.</li>
+            <li>Automatic checks that stop bad data at the door, with a quality score for every factory and data owner.</li>
+            <li>Smart matching that merges look-alike records into one trusted version, without merging things that only look similar.</li>
+            <li>A cost model for every kind of error, and a plan for who owns which data and how fast problems get fixed.</li>
+          </ul>
+          <div class="nums">
+            <div><b>99.4<small>%</small></b><span>of flagged duplicates were real</span></div>
+            <div><b>3,280</b><span>duplicate records found to retire</span></div>
+            <div><b>~5<small> mo</small></b><span>for the clean-up to pay for itself</span></div>
+          </div>
+          <div class="tools"><span>Python</span><span>SQL</span><span>dbt</span><span>Great Expectations</span><span>Splink</span><span>DuckDB</span></div>
+          <p class="honest">Built for a fictional packaging company using realistic test data, so every result could be checked against the right answer.</p>
+          <div class="links"><a class="btn primary sm" href="https://vaeeshnavi-buwa.github.io/master-data-governance-platform/dashboard/standalone.html" target="_blank" rel="noopener" data-say="Go on, click it. It's live.">Open the live dashboard</a><a class="more" href="https://github.com/Vaeeshnavi-Buwa/master-data-governance-platform" target="_blank" rel="noopener" data-say="The code doesn't lie.">See the code</a></div>
+        </div>
+      </article>
+
+      <article class="project flip reveal">
+        <div class="visual wine" data-say="Revenue fell. Every bar is one reason why.">
+          <span class="status">Tested, live data next</span>
+          <svg viewBox="0 0 420 260" class="v-bridge" role="img" aria-label="Revenue bridge splitting a fall into its causes">
+            <line x1="20" y1="214" x2="400" y2="214" stroke="#24433A"/>
+            <g>
+              <rect class="bar-a" x="30"  y="40"  width="44" height="174" fill="#6A8F7B"/>
+              <rect class="bar-a" x="92"  y="40"  width="44" height="34"  fill="#D4A017" style="animation-delay:.35s"/>
+              <rect class="bar-a fall" x="154" y="74"  width="44" height="38"  fill="#B35C6B" style="animation-delay:.7s"/>
+              <rect class="bar-a fall" x="216" y="112" width="44" height="15"  fill="#B35C6B" style="animation-delay:1.05s"/>
+              <rect class="bar-a fall" x="278" y="127" width="44" height="13"  fill="#B35C6B" style="animation-delay:1.4s"/>
+              <rect class="bar-a" x="340" y="70"  width="44" height="144" fill="#8B1E3F" style="animation-delay:1.75s"/>
+            </g>
+            <g class="flag" style="animation-delay:.7s"><rect x="146" y="44" width="60" height="22" rx="11" fill="#F1EADB"/><text x="176" y="59" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#8B1E3F">#1 cause</text></g>
+            <g font-family="Montserrat,sans-serif" font-size="11" fill="#A9B8AE" text-anchor="middle">
+              <text x="52" y="232">Last week</text><text x="114" y="232">Visitors</text><text x="176" y="232">Mobile</text>
+              <text x="238" y="232">Ad mix</text><text x="300" y="232">Ads</text><text x="362" y="232">This week</text>
+            </g>
+            <text class="tot" x="362" y="60" text-anchor="middle" fill="#E6DCC5" font-family="Playfair Display,serif" font-size="16">−16.8%</text>
+          </svg>
+          <span class="inspect">Hover to zoom</span>
+        </div>
+        <div class="body">
+          <h3>Why did revenue move? An automatic answer</h3>
+          <p class="hook">Every Monday a leadership team asks: revenue changed, why, and who fixes it? Analysts can spend hours finding out. My system answers in seconds, in plain English, with a named owner for each action.</p>
+          <h4>What I built</h4>
+          <ul>
+            <li>SQL that turns raw website clicks into clean visits and orders, with a quality check so nobody acts on broken tracking.</li>
+            <li>A daily alarm that knows festive sales are normal, so people keep trusting it.</li>
+            <li>A breakdown that splits every revenue change into visitors, conversion, basket size and traffic mix. The parts always add up to the total.</li>
+            <li>A weekly business review written automatically, sending each problem to engineering, marketing or product.</li>
+          </ul>
+          <div class="nums">
+            <div><b>5<small>/5</small></b><span>sudden problems caught the same day</span></div>
+            <div><b>0.64<small>%</small></b><span>false alarms</span></div>
+            <div><b>0</b><span>times it blamed the wrong team</span></div>
+          </div>
+          <div class="tools"><span>BigQuery SQL</span><span>Python</span><span>Statistics</span><span>Google Analytics 4</span><span>Automation</span></div>
+          <p class="honest">Tested on five datasets it had never seen, each with problems planted on purpose. The run on Google's real store data is in progress.</p>
+          <div class="links"><a class="more" href="https://github.com/Vaeeshnavi-Buwa" target="_blank" rel="noopener" data-say="Code goes up once the live-data run is done.">More on GitHub</a></div>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="visual" data-say="Not just a score. The reasons too.">
+          <span class="status">Built</span>
+          <svg viewBox="0 0 420 260" class="v-gauge" role="img" aria-label="Risk gauge for a loan applicant with reasons">
+            <defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#6A8F7B"/><stop offset=".55" stop-color="#D4A017"/><stop offset="1" stop-color="#8B1E3F"/></linearGradient></defs>
+            <path d="M110 190 A100 100 0 0 1 310 190" fill="none" stroke="#24433A" stroke-width="18" stroke-linecap="round"/>
+            <path class="arc" d="M110 190 A100 100 0 0 1 310 190" fill="none" stroke="url(#gg)" stroke-width="18" stroke-linecap="round"/>
+            <g class="needle"><line x1="210" y1="190" x2="210" y2="112" stroke="#F1EADB" stroke-width="4" stroke-linecap="round"/></g>
+            <circle cx="210" cy="190" r="8" fill="#F1EADB"/>
+            <text class="verdict" x="210" y="80" text-anchor="middle" fill="#E6DCC5" font-family="Playfair Display,serif" font-size="22">Medium risk</text>
+            <g font-family="Montserrat,sans-serif" font-size="12" font-weight="600">
+              <g class="why"><rect x="40" y="214" width="150" height="28" rx="14" fill="rgba(179,92,107,.25)" stroke="#B35C6B"/><text x="115" y="232" text-anchor="middle" fill="#F1EADB">2 late payments</text></g>
+              <g class="why why2"><rect x="230" y="214" width="150" height="28" rx="14" fill="rgba(212,160,23,.18)" stroke="#D4A017"/><text x="305" y="232" text-anchor="middle" fill="#F1EADB">High card use</text></g>
+            </g>
+          </svg>
+          <span class="inspect">Hover to zoom</span>
+        </div>
+        <div class="body">
+          <h3>Credit risk engine with reasons you can read</h3>
+          <p class="hook">Lenders lose money two ways: lending to people who won't repay, and turning away people who would have. I built a model that predicts who is likely to default and explains every decision in plain words.</p>
+          <h4>What I built</h4>
+          <ul>
+            <li>A risk score trained on 150,000 real borrower records.</li>
+            <li>A clear reason behind every score, such as late payments or high credit card use, so a loan officer can trust it and explain it to a customer.</li>
+            <li>An app where anyone can look up an applicant and see the reasons.</li>
+          </ul>
+          <div class="tools"><span>Python</span><span>XGBoost</span><span>SHAP</span><span>Streamlit</span></div>
+          <p class="honest">Next step: the approval cut-off that earns the most profit, not just the most accurate one.</p>
+          <div class="links"><a class="btn primary sm" href="https://credit-risk-engine-v.streamlit.app/" target="_blank" rel="noopener" data-say="Try scoring an applicant yourself.">Try the live app</a><a class="more" href="https://github.com/Vaeeshnavi-Buwa/credit-risk-engine" target="_blank" rel="noopener" data-say="The code doesn't lie.">See the code</a></div>
+        </div>
+      </article>
+
+      <article class="project flip reveal">
+        <div class="visual wine" data-say="The scan finds the risky stores first.">
+          <span class="status wip">In progress</span>
+          <svg viewBox="0 0 420 260" class="v-map" role="img" aria-label="Map of stores with a scan highlighting high-risk sites">
+            <defs><linearGradient id="sw" x1="0" x2="1"><stop offset="0" stop-color="#D4A017" stop-opacity="0"/><stop offset="1" stop-color="#D4A017" stop-opacity=".35"/></linearGradient></defs>
+            <g fill="#6A8F7B" opacity=".55">
+              <circle cx="60" cy="70" r="5"/><circle cx="110" cy="140" r="5"/><circle cx="160" cy="60" r="5"/><circle cx="200" cy="190" r="5"/>
+              <circle cx="250" cy="90" r="5"/><circle cx="300" cy="160" r="5"/><circle cx="350" cy="60" r="5"/><circle cx="380" cy="200" r="5"/>
+              <circle cx="90" cy="210" r="5"/><circle cx="230" cy="40" r="5"/><circle cx="320" cy="110" r="5"/><circle cx="140" cy="200" r="5"/>
+            </g>
+            <g class="sweep"><rect x="-40" y="10" width="40" height="215" fill="url(#sw)"/><line x1="0" y1="10" x2="0" y2="225" stroke="#D4A017" stroke-width="2"/></g>
+            <circle class="risk" cx="70" cy="120" r="7" fill="#B35C6B" style="animation-delay:.55s"/>
+            <circle class="pulse" cx="70" cy="120" r="7" fill="none" stroke="#B35C6B" stroke-width="2"/>
+            <circle class="risk" cx="180" cy="120" r="7" fill="#D4A017" style="animation-delay:1.45s"/>
+            <circle class="pulse" cx="180" cy="120" r="7" fill="none" stroke="#D4A017" stroke-width="2" style="animation-delay:.7s"/>
+            <circle class="risk" cx="280" cy="210" r="7" fill="#B35C6B" style="animation-delay:2.35s"/>
+            <circle class="pulse" cx="280" cy="210" r="7" fill="none" stroke="#B35C6B" stroke-width="2" style="animation-delay:1.4s"/>
+            <text x="210" y="250" text-anchor="middle" fill="#E6DCC5" font-family="Montserrat,sans-serif" font-size="13">Inspect these first</text>
+          </svg>
+          <span class="inspect">Hover to zoom</span>
+        </div>
+        <div class="body">
+          <h3>Which store will fail its hygiene check next?</h3>
+          <p class="hook">In August 2026, Maharashtra's food regulator inspected 86 quick-commerce dark stores and suspended 14 licences. With limited inspection time, the real question is where to look first. I'm building a model that ranks every site by its risk of failing.</p>
+          <h4>What it will show</h4>
+          <ul>
+            <li>Which sites are most likely to fail, and the warning signs behind each one.</li>
+            <li>How many more problems each hour of inspection catches compared with today's order.</li>
+            <li>What a store closure costs an operator, compared with the cost of checking first.</li>
+          </ul>
+          <div class="tools"><span>SQL</span><span>Python</span><span>Machine learning</span><span>Public inspection data</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="value">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="rule"></span>
+        <h2>What you get when you hire me</h2>
+        <p>Plenty of people can build a dashboard. Here's what I bring on top of that.</p>
+      </div>
+      <div class="gets reveal">
+        <div class="get" data-say="Charts are easy. Answers are the job.">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>
+          <h3>Answers, not just charts</h3>
+          <p>I start with the decision you need to make, so you get an answer you can act on, not another dashboard to decode.</p>
+        </div>
+        <div class="get" data-say="She checks. Then she checks again.">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>
+          <h3>Numbers you can defend</h3>
+          <p>I check the data before I trust it and test my methods on cases with known answers. When a leader asks "are you sure?", the answer is yes.</p>
+        </div>
+        <div class="get" data-say="No report left unread.">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 11l2 2 4-4"/></svg>
+          <h3>Problems with owners</h3>
+          <p>Every finding comes with what it's worth, who should fix it and what to do next, so nothing sits in a report unread.</p>
+        </div>
+        <div class="get" data-say="Work smarter. Literally.">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
+          <h3>Work that runs itself</h3>
+          <p>If a question comes back every week, I automate the answer, so the team spends its time on decisions instead of rebuilding the same report.</p>
+        </div>
+        <div class="get" data-say="Teams get better around her.">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V10"/><path d="M8 14l4-4 4 4"/><path d="M4 20h16"/><circle cx="12" cy="5" r="2"/></svg>
+          <h3>People who grow around me</h3>
+          <p>I've taught 300+ learners and I support colleagues at every level, from new joiners to senior stakeholders. Teams get stronger, not more dependent on me.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="rule"></span>
+        <h2>Experience</h2>
+        <p>Six years across global manufacturing, a job platform and research.</p>
+      </div>
+      <div class="timeline">
+        <div class="job reveal">
+          <div class="when">Aug 2021 to present</div>
+          <h3>Data and MDM Analyst</h3>
+          <div class="org">Equity Packaging, for a global FMCG leader across North America, the Philippines, Australia and South East Asia</div>
+          <ul>
+            <li>Keep the data for 2,500+ products accurate and compliant across categories and factories, using SAP PLM.</li>
+            <li>Cut the approval time for product specifications by 30%, so products reached the market about two weeks sooner.</li>
+            <li>Made reports 25% more accurate by building checks into how data is entered and reviewed.</li>
+            <li>Work with 5+ international teams to deliver data and reports on time.</li>
+            <li>Support people at every level: training new joiners on the systems, helping colleagues solve data problems, and walking senior stakeholders through what the numbers mean.</li>
+          </ul>
+        </div>
+        <div class="job reveal">
+          <div class="when">May 2023 to Dec 2023</div>
+          <h3>Data Analyst</h3>
+          <div class="org">Zyvika, a job search platform</div>
+          <ul>
+            <li>Scraped job openings from newspaper websites and kept the portal's job listings complete and up to date.</li>
+            <li>Built dashboards that tracked the app's data, so the team always worked from accurate numbers.</li>
+            <li>Supported job seekers on the platform, helping them with their questions and their search.</li>
+            <li>Automated repetitive steps wherever I could, making the team's work about 30% more efficient.</li>
+            <li>Wrote blogs for the Zyvika website.</li>
+          </ul>
+        </div>
+        <div class="job reveal">
+          <div class="when">Feb 2021 to Sep 2022</div>
+          <h3>Research Associate and Analyst</h3>
+          <div class="org">BioNome</div>
+          <ul>
+            <li>Taught Python, bioinformatics and data analysis to 300+ learners worldwide, from undergraduate students to PhD researchers.</li>
+            <li>Helped grow course enrolments by 40%.</li>
+            <li>Ran research analysis and turned complex datasets into clear reports.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="two reveal">
+        <div class="panel" data-say="Her toolkit. Mine is just this glass.">
+          <h3>Toolkit</h3>
+          <div class="skillrow"><b>Data and SQL</b><div class="chips"><span>SQL</span><span>BigQuery</span><span>DuckDB</span><span>dbt</span><span>MongoDB</span></div></div>
+          <div class="skillrow"><b>Analysis</b><div class="chips"><span>Python</span><span>pandas</span><span>Statistics</span><span>Machine learning</span><span>Web scraping</span><span>Automation</span></div></div>
+          <div class="skillrow"><b>Reporting</b><div class="chips"><span>Power BI</span><span>Tableau</span><span>Streamlit</span><span>Excel</span></div></div>
+          <div class="skillrow" style="margin-bottom:0"><b>Business areas</b><div class="chips"><span>Data governance</span><span>Master data</span><span>SAP PLM</span><span>FMCG</span><span>E-commerce</span><span>Credit risk</span></div></div>
+        </div>
+        <div class="panel wine" data-say="Yes, a published author. Casual.">
+          <h3>Published research</h3>
+          <p>Author of a chapter on using AI and machine learning for quality control and inspection, in <em>Artificial Intelligence in Food Science</em>, published by Elsevier.</p>
+          <h3 style="margin-top:28px">Education</h3>
+          <p style="margin:0">M.Sc. Bioinformatics, University of Mumbai</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap reveal">
+      <div class="waver" data-det aria-hidden="true"></div>
+      <h2>Good analysts are hard to find. You just found one.</h2>
+      <p>Open to senior analyst, lead analyst and analytics manager roles in Mumbai, Pune or remote. Give me 15 minutes and I'll walk you through any project.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:buwavaeeshnavi@gmail.com" data-say="Go on, say hi. She doesn't bite.">Email me</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/vaeeshnavibuwa" data-say="Connect now. Thank yourself later.">Connect on LinkedIn</a>
+      </div>
+      <p class="small"><a href="mailto:buwavaeeshnavi@gmail.com">buwavaeeshnavi@gmail.com</a><a href="https://github.com/Vaeeshnavi-Buwa" data-say="The code doesn't lie.">GitHub</a></p>
+    </div>
+  </section>
+</main>
+
+<div class="buddy" id="buddy" aria-hidden="true"><div class="face" data-det></div></div>
+<div class="bubble" id="bubble" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var root = document.documentElement;
+
+  // ---------- the detective ----------
+  var DET = '<svg class="det" viewBox="0 0 84 100" aria-hidden="true">' +
+    '<ellipse cx="38" cy="96.5" rx="20" ry="3" fill="rgba(0,0,0,.35)"/>' +
+    '<g class="bob">' +
+    '<g class="l1"><rect x="27" y="72" width="7" height="20" rx="2" fill="#1E2B27"/><ellipse cx="29.5" cy="93" rx="6" ry="3.2" fill="#0B0F0E"/></g>' +
+    '<g class="l2"><rect x="40" y="72" width="7" height="20" rx="2" fill="#1E2B27"/><ellipse cx="45" cy="93" rx="6" ry="3.2" fill="#0B0F0E"/></g>' +
+    '<path d="M25 46 Q17 58 20 68" stroke="#6E1832" stroke-width="7" stroke-linecap="round" fill="none"/>' +
+    '<circle cx="20" cy="69.5" r="3.6" fill="#EBCDAA"/>' +
+    '<path d="M24 42 Q37 36 50 42 L56 80 Q37 85 18 80 Z" fill="#8B1E3F"/>' +
+    '<path d="M37 40 Q44 39 50 42 L56 80 Q47 83 40 83 Z" fill="#76183A"/>' +
+    '<path d="M33 40 L37 50 L41 40 Z" fill="#E6DCC5"/>' +
+    '<path d="M29 40 L37 56 L45 40" fill="none" stroke="#B9475F" stroke-width="2.4" stroke-linejoin="round"/>' +
+    '<rect x="20" y="64" width="35" height="3.6" fill="#D4A017"/>' +
+    '<rect x="34.5" y="63" width="6" height="5.6" rx="1" fill="none" stroke="#7A5A08" stroke-width="1.2"/>' +
+    '<circle cx="34" cy="59" r="1.3" fill="#D4A017"/><circle cx="41" cy="59" r="1.3" fill="#D4A017"/>' +
+    '<circle cx="34" cy="73" r="1.3" fill="#D4A017"/><circle cx="41" cy="73" r="1.3" fill="#D4A017"/>' +
+    '<path d="M24 26 Q22 41 30 41 L44 41 Q52 41 50 26 Z" fill="#2A1A14"/>' +
+    '<circle cx="37" cy="27" r="11" fill="#EBCDAA"/>' +
+    '<path d="M26 25 Q28 17 37 17 Q33 22 27 31 Z" fill="#2A1A14"/>' +
+    '<path d="M32 24.2 q2 -1 4 0 M39.5 24.2 q2 -1 4 0" stroke="#2A1A14" stroke-width="1.1" fill="none" stroke-linecap="round"/>' +
+    '<ellipse cx="34" cy="28" rx="1.5" ry="2" fill="#16231F"/><ellipse cx="41.5" cy="28" rx="1.5" ry="2" fill="#16231F"/>' +
+    '<circle cx="34.5" cy="27.2" r=".55" fill="#fff"/><circle cx="42" cy="27.2" r=".55" fill="#fff"/>' +
+    '<circle cx="31" cy="31.5" r="1.9" fill="rgba(179,92,107,.45)"/><circle cx="44.5" cy="31.5" r="1.9" fill="rgba(179,92,107,.45)"/>' +
+    '<path d="M35 33.2 q2.5 2 5 0" stroke="#7A2A2A" stroke-width="1.2" fill="none" stroke-linecap="round"/>' +
+    '<ellipse cx="37" cy="18" rx="17" ry="3.8" fill="#0F4D3F"/>' +
+    '<path d="M26 18 Q26 6 37 7 Q48 6 48 18 Z" fill="#0F4D3F"/>' +
+    '<path d="M33 8 Q37 11 41 8" stroke="#0A3A2F" stroke-width="1.2" fill="none"/>' +
+    '<rect x="26.3" y="13.5" width="21.4" height="3" fill="#D4A017"/>' +
+    '<path d="M21 17.4 Q37 14 53 17.4" stroke="#1B6B57" stroke-width="1" fill="none"/>' +
+    '<g class="arm">' +
+    '<path d="M49 45 L62.5 40.5" stroke="#8B1E3F" stroke-width="7" stroke-linecap="round"/>' +
+    '<circle cx="64.5" cy="39.5" r="3.6" fill="#EBCDAA"/>' +
+    '<path class="handle" d="M66.5 37.5 L71 33" stroke="#D4A017" stroke-width="3.2" stroke-linecap="round"/>' +
+    '<circle class="glass" cx="76" cy="27.5" r="8" fill="rgba(230,220,197,.22)" stroke="#D4A017" stroke-width="3"/>' +
+    '<path class="glint" d="M72 25 q1.5 -3 5 -3.4" stroke="#fff" stroke-opacity=".75" stroke-width="1.4" fill="none" stroke-linecap="round"/>' +
+    '</g></g></svg>';
+  document.querySelectorAll('[data-det]').forEach(function(el){ el.innerHTML = DET; });
+
+  // ---------- nav ----------
+  var bar = document.getElementById('bar');
+  function navState(){ bar.classList.toggle('solid', window.scrollY > 40); }
+  window.addEventListener('scroll', navState, {passive:true}); navState();
+
+  // ---------- count up ----------
+  function count(n){
+    var to = parseFloat(n.dataset.to), sep = n.dataset.sep;
+    function fmt(v){ var s = Math.round(v); return sep ? s.toLocaleString('en-IN') : String(s); }
+    if (reduce) { n.textContent = fmt(to); return; }
+    var start = null, dur = 1700;
+    function step(t){ if(!start) start = t; var p = Math.min((t - start) / dur, 1);
+      n.textContent = fmt(to * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  var counted = false;
+  function runCounts(){ if (counted) return; counted = true; document.querySelectorAll('.count').forEach(count); }
+
+  // ---------- where is the reader? ----------
+  var order = ['start','work','value','experience','skills','contact'];
+  function currentSection(){
+    var cur = 'start';
+    order.forEach(function(id){ var el = document.getElementById(id); if (el && el.getBoundingClientRect().top < window.innerHeight * 0.45) cur = id; });
+    return cur;
+  }
+  var idleLines = {
+    start: ["Scroll down. The good stuff is right below.", "Psst. Her projects are just below."],
+    work: ["Point at a picture. I dare you.", "Each of these took weeks. Worth a look."],
+    value: ["\u201cAnswers, not just charts.\u201d My favourite one.", "Numbers she can defend. Rare, honestly."],
+    experience: ["2,500+ products' data, and no mess.", "Teaching PhDs and new joiners alike. Not bad."],
+    skills: ["A published author, by the way.", "That's a serious toolkit."],
+    contact: ["Don't let a good analyst get away.", "One email. That's all it takes."]
+  };
+  var greet = {work:"These are the projects. Point at a picture to zoom in.", value:"This is where she makes her case.", experience:"Six years. Every one of them counted.", skills:"Her toolkit. Mine is just this glass.", contact:"Don't let a good analyst get away."};
+  function pick(arr, avoid){ var c = arr.filter(function(x){ return x !== avoid; }); return c[Math.floor(Math.random() * c.length)] || arr[0]; }
+
+  // ---------- speech ----------
+  var buddy = document.getElementById('buddy'), bubble = document.getElementById('bubble'), sayT = null, lastSaid = '', lastAt = 0;
+  var bx = -200, by = -200, tx = -200, ty = -200;
+  function placeBubble(){
+    if (!bubble.classList.contains('show')) return;
+    var w = bubble.offsetWidth, h = bubble.offsetHeight, W = window.innerWidth, H = window.innerHeight, x, y;
+    if (buddy.classList.contains('touchmode')) { var r = buddy.getBoundingClientRect(); x = r.right - w; y = r.top - h - 8; }
+    else { x = bx + 56; if (x + w > W - 12) x = bx + 64 - w; y = by - h - 2; if (y < 80) y = by + 92; }
+    x = Math.max(12, Math.min(x, W - w - 12)); y = Math.max(76, Math.min(y, H - h - 12));
+    bubble.style.transform = ''; bubble.style.left = x + 'px'; bubble.style.top = y + 'px';
+  }
+  function say(text, ms){
+    if (!text || root.classList.contains('intro-on')) return;
+    var now = Date.now(); if (text === lastSaid && now - lastAt < 8000) return;
+    lastSaid = text; lastAt = now;
+    bubble.textContent = text; bubble.classList.add('show'); placeBubble();
+    clearTimeout(sayT); sayT = setTimeout(function(){ bubble.classList.remove('show'); }, ms || 3600);
+  }
+
+  // ---------- intro ----------
+  var intro = document.getElementById('intro'), timers = [];
+  var messy = ['NULL','#N/A','98O kg','dupl.','13/45/21','₹-500','??','blank','SKU_01 x3','mumbai ','0.0.1','err','₹1,240','980 kg','OK','2026-09','Pune','Supplier A','verified','₹500'];
+  function fillWall(w){ var h = ''; for (var k = 0; k < 360; k++) { var v = messy[(k * 7 + (k >> 2)) % messy.length]; var bad = (k * 13) % 9 === 0;
+      h += '<div' + (bad ? ' class="bad" style="animation-delay:' + ((k % 7) * 0.2) + 's"' : '') + '>' + v + '</div>'; } w.innerHTML = h; }
+  function afterIntro(){
+    setTimeout(runCounts, 600);
+    buddy.classList.add('on');
+    setTimeout(function(){ say(finePointer ? "Hi! I'm your guide. I'll follow you around and point out the good bits." : "Hi! I'm your guide. Tap me any time.", 4200); }, 700);
+  }
+  function endIntro(){
+    timers.forEach(clearTimeout); timers = [];
+    intro.style.display = 'none'; intro.classList.remove('open');
+    root.classList.remove('intro-on');
+    try { sessionStorage.setItem('introSeen','1'); } catch(e) {}
+    afterIntro();
+  }
+  function playIntro(){
+    timers.forEach(clearTimeout); timers = [];
+    var fresh = intro.cloneNode(true); intro.parentNode.replaceChild(fresh, intro); intro = fresh;
+    fillWall(intro.querySelector('.wall'));
+    intro.style.display = ''; intro.classList.remove('open');
+    window.scrollTo(0, 0);
+    root.classList.add('intro-on'); bubble.classList.remove('show');
+    intro.querySelector('.skip').addEventListener('click', endIntro);
+    timers.push(setTimeout(function(){ intro.classList.add('open'); }, 4700));
+    timers.push(setTimeout(endIntro, 5800));
+  }
+  var seen = false; try { seen = sessionStorage.getItem('introSeen') === '1'; } catch(e) {}
+  if (reduce || seen) { intro.style.display = 'none'; setTimeout(afterIntro, 200); }
+  else playIntro();
+  document.getElementById('replay').addEventListener('click', function(){ if (!reduce) playIntro(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && root.classList.contains('intro-on')) endIntro(); });
+
+  // ---------- diagonal clue field ----------
+  var pairs = [['NULL','₹1,240'],['98O kg','980 kg'],['dupl.','merged'],['#N/A','Pune'],['13/45/21','13 Apr 21'],['??','OK'],['₹-500','₹500'],['mumbai ','Mumbai'],['SKU_01 x3','SKU_01'],['err','verified'],['blank','Supplier A'],['0.0.1','0.01']];
+  var clues = document.getElementById('clues'), tilt = document.getElementById('tilt'), hero = clues.parentNode;
+  var lensEl = document.getElementById('lens'), clean = tilt.querySelector('.clean');
+  (function fill(){
+    var hm = '', hc = '';
+    for (var k = 0; k < 420; k++) { var p = pairs[(k * 5 + (k >> 3)) % pairs.length]; hm += '<div>' + p[0] + '</div>'; hc += '<div>' + p[1] + '</div>'; }
+    tilt.querySelector('.messy').innerHTML = hm; clean.innerHTML = hc;
+  })();
+  var ANG = -14 * Math.PI / 180;
+  function placeLens(x, y){
+    var W = hero.clientWidth, H = hero.clientHeight;
+    lensEl.style.setProperty('--mx', x + 'px'); lensEl.style.setProperty('--my', y + 'px');
+    var dx = x - W / 2, dy = y - H / 2, c = Math.cos(-ANG), s = Math.sin(-ANG);
+    tilt.style.setProperty('--cx', (dx * c - dy * s + tilt.offsetWidth / 2) + 'px');
+    tilt.style.setProperty('--cy', (dx * s + dy * c + tilt.offsetHeight / 2) + 'px');
+  }
+  function hideLens(){ lensEl.style.setProperty('--mx','-999px'); tilt.style.setProperty('--cx','-9999px'); }
+  var autoLens = !finePointer, tt = 0;
+  if (!reduce) (function wander(){
+    if (autoLens) { tt += 0.005; var W = hero.clientWidth, H = hero.clientHeight;
+      placeLens(W * (0.74 + 0.16 * Math.cos(tt * 1.2)), H * (0.48 + 0.28 * Math.sin(tt * 1.9))); }
+    requestAnimationFrame(wander);
+  })();
+
+  // ---------- detective companion ----------
+  var idleT = null;
+  function idleNudge(ms){ clearTimeout(idleT); idleT = setTimeout(function(){
+    say(pick(idleLines[currentSection()], lastSaid), 3800); idleNudge(14000); }, ms || 10000); }
+
+  if (finePointer && !reduce) {
+    var lastX = 0;
+    document.addEventListener('pointermove', function(e){
+      if (e.pointerType !== 'mouse') return;
+      var hr0 = hero.getBoundingClientRect(), inH = e.clientY >= hr0.top && e.clientY <= hr0.bottom && !e.target.closest('a,button');
+      tx = e.clientX + (inH ? 90 : 18); ty = e.clientY + (inH ? -20 : 14);
+      var dx = e.clientX - lastX; lastX = e.clientX;
+      if (dx < -3) buddy.classList.add('flip'); else if (dx > 3) buddy.classList.remove('flip');
+      var hr = hero.getBoundingClientRect();
+      if (e.clientY >= hr.top && e.clientY <= hr.bottom) placeLens(e.clientX - hr.left, e.clientY - hr.top); else hideLens();
+      buddy.classList.toggle('hot', !!e.target.closest('a,button,.visual'));
+      var t = e.target.closest('[data-say]'); if (t) say(t.dataset.say);
+      if (!root.classList.contains('intro-on')) buddy.classList.add('on');
+      idleNudge();
+    });
+    hero.addEventListener('pointerleave', hideLens);
+    document.addEventListener('pointerdown', function(){ buddy.classList.remove('tap'); void buddy.offsetWidth; buddy.classList.add('tap'); });
+    document.documentElement.addEventListener('mouseleave', function(){ buddy.classList.remove('on'); bubble.classList.remove('show'); });
+    (function follow(){
+      var dx = tx - bx, dy = ty - by;
+      bx += dx * 0.16; by += dy * 0.16;
+      buddy.style.transform = 'translate(' + bx + 'px,' + by + 'px)';
+      buddy.classList.toggle('moving', Math.abs(dx) + Math.abs(dy) > 2);
+      placeBubble();
+      requestAnimationFrame(follow);
+    })();
+  } else {
+    buddy.classList.add('touchmode');
+    buddy.addEventListener('click', function(){
+      say(pick(idleLines[currentSection()], lastSaid), 3800);
+      buddy.classList.remove('tap'); void buddy.offsetWidth; buddy.classList.add('tap');
+    });
+    window.addEventListener('scroll', placeBubble, {passive:true});
+  }
+  window.addEventListener('scroll', function(){ idleNudge(); }, {passive:true});
+  window.addEventListener('resize', placeBubble);
+
+  // section greetings, once each, only when the reader actually arrives
+  if ('IntersectionObserver' in window) {
+    var greeted = {};
+    var so = new IntersectionObserver(function(es){ es.forEach(function(e){
+      if (e.isIntersecting && !greeted[e.target.id]) { greeted[e.target.id] = 1; say(greet[e.target.id], 3800); } }); }, {threshold:0.3});
+    Object.keys(greet).forEach(function(id){ var el = document.getElementById(id); if (el) so.observe(el); });
+  }
+
+  // ---------- project magnifier ----------
+  if (finePointer && !reduce) {
+    document.querySelectorAll('.visual').forEach(function(v){
+      var svg = v.querySelector(':scope > svg'); if (!svg) return;
+      var zoom = document.createElement('div'); zoom.className = 'zoom'; zoom.innerHTML = '<div class="zin"></div>'; v.appendChild(zoom);
+      var zin = zoom.firstChild, clone = null, Z = 2.2, L = 190;
+      v.addEventListener('pointerenter', function(e){
+        if (e.pointerType !== 'mouse') return;
+        zin.innerHTML = ''; clone = svg.cloneNode(true); clone.removeAttribute('role'); zin.appendChild(clone);
+        v.classList.add('zooming');
+      });
+      v.addEventListener('pointermove', function(e){
+        if (!clone) return;
+        var r = svg.getBoundingClientRect(), vr = v.getBoundingClientRect();
+        zoom.style.left = (e.clientX - vr.left) + 'px'; zoom.style.top = (e.clientY - vr.top) + 'px';
+        clone.style.width = (r.width * Z) + 'px'; clone.style.height = (r.height * Z) + 'px';
+        clone.style.left = (L / 2 - (e.clientX - r.left) * Z) + 'px'; clone.style.top = (L / 2 - (e.clientY - r.top) * Z) + 'px';
+      });
+      v.addEventListener('pointerleave', function(){ v.classList.remove('zooming'); clone = null; });
+    });
+  }
+
+  // ---------- reveal on scroll ----------
+  var items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:0.12});
+    items.forEach(function(x){ io.observe(x); });
+  } else { items.forEach(function(x){ x.classList.add('in'); }); }
+})();
+</script>
+</body>
 </html>
